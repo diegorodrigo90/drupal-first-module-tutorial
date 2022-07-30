@@ -1,0 +1,6 @@
+policy.form_update:
+  title: "Policy Terms Settings"
+  description: "Update policy terms"
+  route_name: policy.form_update
+  parent: system.admin_config_content
+  weight: 10

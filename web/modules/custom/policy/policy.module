@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_user_register_form_alter().
+ */
+function policy_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['policy_terms'] = [
+    '#type' => 'checkbox',
+    '#default_value' => FALSE,
+    '#title' => t('I have read and accept <a href="@policy_terms"  target="_blank" class="use-ajax" data-dialog-options="{&quot;width&quot;:&quot;60vw&quot; }"  data-toggle="modal" data-dialog-type="modal">the policy terms</a>.', ['@policy_terms' => Url::fromRoute('policy.content')->toString()]),
+    '#required' => TRUE,
+  ];
+}

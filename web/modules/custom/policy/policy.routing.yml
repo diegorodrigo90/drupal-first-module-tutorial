@@ -1,0 +1,15 @@
+policy.content:
+  path: "/policy"
+  defaults:
+    _controller: '\Drupal\policy\Controller\PolicyController::content'
+    _title: "Policy terms"
+  requirements:
+    _permission: "access content"
+
+policy.form_update:
+  path: "/admin/config/content/policy"
+  defaults:
+    _form: '\Drupal\policy\Form\PolicySettingsForm'
+    _title: "Update Policy Terms"
+  requirements:
+    _role: "administrator"

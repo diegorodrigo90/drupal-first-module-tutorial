@@ -1,0 +1,10 @@
+policy.settings:
+  type: config_object
+  label: "Policy Content Type Settings"
+  mapping:
+    title:
+      type: text
+      label: "Title"
+    message:
+      type: text
+      label: "Policy terms"
